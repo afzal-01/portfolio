@@ -8,6 +8,7 @@ export interface PersonalInfo {
   phone: string;
   email: string;
   location: string;
+  profileImage?: string;
   socials: {
     github?: string;
     linkedin?: string;
@@ -21,14 +22,15 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: "Afzal Hameed Faiz",
-  role: "Associate Data Analyst | Business Intelligence",
+  role: "Associate | Business Intelligence",
   headline: "Turning Data Into Meaningful Business Insights",
   heroGreeting: "HELLO, I'M",
-  bio: "Associate Data Analyst at Genpact with hands-on experience in business intelligence, KPI dashboards, and data quality. Skilled in Excel, SQL, Power BI, and Tableau, with a proven ability to turn large, multi-source datasets into clear insights for management.",
+  bio: "Associate at Genpact with hands-on experience in business intelligence, KPI dashboards, and data quality. Skilled in Excel, SQL, Power BI, and Tableau, with a proven ability to turn large, multi-source datasets into clear insights for management.",
   aboutIntro: "I'm an Associate Data Analyst at Genpact with experience in building KPI dashboards, analysing multi-source data, ensuring data quality, and delivering clear, decision-ready insights. I work well independently and with cross-functional teams to solve business problems through data.",
   phone: "+91 7373786702",
   email: "afzalfaiz0110@gmail.com",
   location: "India",
+  profileImage: "/images/profile.jpg",
   socials: {
     linkedin: "https://linkedin.com",
     github: "https://github.com",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Download, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { personalInfo } from '../data/personal';
 
 export const Navbar: React.FC = () => {
@@ -63,18 +63,6 @@ export const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* Download Resume Button with direct download attribute */}
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="/resume/Afzal-Hameed-Faiz-Resume.pdf"
-              download="Afzal-Hameed-Faiz-Resume.pdf"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] text-white hover:from-[#7C3AED] hover:to-[#9333EA] shadow-md shadow-[#8B5CF6]/30 hover:shadow-[#8B5CF6]/50 hover:scale-105 active:scale-95 transition-all"
-            >
-              <Download className="w-4 h-4" />
-              <span>Resume</span>
-            </a>
-          </div>
-
           {/* Mobile Menu Toggle */}
           <div className="flex md:hidden items-center gap-2">
             <button
@@ -102,16 +90,6 @@ export const Navbar: React.FC = () => {
               {link.label}
             </a>
           ))}
-          <div className="pt-3 border-t border-[#8B5CF6]/20">
-            <a
-              href="/resume/Afzal-Hameed-Faiz-Resume.pdf"
-              download="Afzal-Hameed-Faiz-Resume.pdf"
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] text-white font-semibold text-sm shadow-lg shadow-[#8B5CF6]/30"
-            >
-              <Download className="w-4 h-4" />
-              <span>Download Resume</span>
-            </a>
-          </div>
         </div>
       )}
     </header>

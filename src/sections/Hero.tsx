@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BarChart2, Mail, Users, Database, Layers, ArrowRight } from 'lucide-react';
+import { Mail, Users, Database, Layers, ArrowRight, Download } from 'lucide-react';
 import { personalInfo } from '../data/personal';
 import { HeroDashboardGraphic } from '../components/HeroDashboardGraphic';
 
@@ -58,20 +58,31 @@ export const Hero: React.FC = () => {
               {personalInfo.bio}
             </p>
 
-            {/* Action Buttons */}
+            {/* Action Buttons: Explore Projects -> Download Resume -> Contact Me */}
             <div className="flex flex-wrap items-center gap-3 pt-1">
+              {/* 1. Explore Projects */}
               <a
                 href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] text-white font-bold text-xs sm:text-sm hover:from-[#7C3AED] hover:to-[#9333EA] shadow-lg shadow-[#8B5CF6]/30 hover:shadow-[#8B5CF6]/50 hover:-translate-y-0.5 active:translate-y-0 transition-all"
               >
-                <BarChart2 className="w-4 h-4" />
                 <span>Explore Projects</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
 
+              {/* 2. Download Resume */}
+              <a
+                href="/resume/Afzal-Hameed-Faiz-Resume.pdf"
+                download="Afzal-Hameed-Faiz-Resume.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#171D35]/90 hover:bg-[#1C2442] text-white font-semibold text-xs sm:text-sm border border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 transition-all hover:-translate-y-0.5 shadow-md shadow-black/20"
+              >
+                <Download className="w-3.5 h-3.5 text-[#C084FC]" />
+                <span>Download Resume</span>
+              </a>
+
+              {/* 3. Contact Me */}
               <a
                 href="mailto:afzalfaiz0110@gmail.com"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#171D35]/80 hover:bg-[#1C2442] text-white font-semibold text-xs sm:text-sm border border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-[#A5AEC5] hover:text-white hover:bg-[#171D35]/60 border border-transparent hover:border-[#8B5CF6]/20 font-semibold text-xs sm:text-sm transition-all"
               >
                 <Mail className="w-3.5 h-3.5 text-[#C084FC]" />
                 <span>Contact Me</span>

@@ -11,15 +11,21 @@ export const About: React.FC = () => {
         <div className="glass-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-7 border border-[#8B5CF6]/25 shadow-xl shadow-black/50">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-center">
             
-            {/* Left: Big AF Badge */}
-            <div className="lg:col-span-2 flex justify-start lg:justify-center">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-[#8B5CF6] to-[#A855F7] flex items-center justify-center font-black text-white text-2xl sm:text-3xl shadow-xl shadow-[#8B5CF6]/30 border border-white/20">
-                AF
+            {/* Left: Profile Photo (Replaces AF box) */}
+            <div className="lg:col-span-3 xl:col-span-2 flex justify-start lg:justify-center shrink-0">
+              <div className="relative w-[105px] h-[125px] sm:w-[120px] sm:h-[140px] rounded-2xl overflow-hidden border-2 border-[#8B5CF6]/35 shadow-xl shadow-[#8B5CF6]/20 bg-[#10152A] group">
+                <img
+                  src={personalInfo.profileImage || "/images/profile.jpg"}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  style={{ objectPosition: 'center top' }}
+                  loading="lazy"
+                />
               </div>
             </div>
 
             {/* Middle: About text */}
-            <div className="lg:col-span-6 space-y-2">
+            <div className="lg:col-span-5 xl:col-span-6 space-y-2">
               <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                 About Me
               </h2>
