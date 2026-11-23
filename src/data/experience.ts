@@ -12,7 +12,7 @@ export const experiences: ExperienceItem[] = [
   {
     id: "genpact",
     company: "Genpact",
-    position: "Associate Data Analyst",
+    position: "Associate",
     location: "Genpact, Madurai",
     duration: "August 2025 – Present",
     badgeText: "Aug 2025 – Present",
