@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/personal';
 
 export const About: React.FC = () => {
@@ -51,6 +51,19 @@ export const About: React.FC = () => {
                   <Mail className="w-3.5 h-3.5" />
                 </div>
                 <span className="font-medium break-all">{personalInfo.email}</span>
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href={personalInfo.socials.linkedin || "https://www.linkedin.com/in/afzalhameedfaiz/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-[#A5AEC5] hover:text-white transition-colors group"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[#10152A] border border-[#8B5CF6]/30 flex items-center justify-center text-[#8B5CF6] shrink-0 group-hover:border-[#8B5CF6] transition-colors shadow-inner">
+                  <Linkedin className="w-3.5 h-3.5" />
+                </div>
+                <span className="font-medium">LinkedIn Profile</span>
               </a>
             </div>
 

@@ -32,7 +32,7 @@ export const personalInfo: PersonalInfo = {
   location: "India",
   profileImage: "/images/profile.jpg",
   socials: {
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/afzalhameedfaiz/",
     github: "https://github.com",
   },
   metrics: [
