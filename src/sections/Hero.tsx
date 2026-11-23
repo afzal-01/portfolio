@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Users, Database, Layers, ArrowRight, Download } from 'lucide-react';
+import { Mail, Users, Database, Layers, ArrowRight, Download, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/personal';
 import { HeroDashboardGraphic } from '../components/HeroDashboardGraphic';
 
@@ -86,6 +86,18 @@ export const Hero: React.FC = () => {
               >
                 <Mail className="w-3.5 h-3.5 text-[#C084FC]" />
                 <span>Contact Me</span>
+              </a>
+
+              {/* 4. LinkedIn */}
+              <a
+                href={personalInfo.socials.linkedin || "https://www.linkedin.com/in/afzalhameedfaiz/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-[#A5AEC5] hover:text-white hover:bg-[#171D35]/60 border border-transparent hover:border-[#8B5CF6]/20 font-semibold text-xs sm:text-sm transition-all"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-3.5 h-3.5 text-[#C084FC]" />
+                <span>LinkedIn</span>
               </a>
             </div>
           </motion.div>
