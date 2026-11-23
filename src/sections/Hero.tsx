@@ -76,7 +76,7 @@ export const Hero: React.FC = () => {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#171D35]/90 hover:bg-[#1C2442] text-white font-semibold text-xs sm:text-sm border border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 transition-all hover:-translate-y-0.5 shadow-md shadow-black/20"
               >
                 <Download className="w-3.5 h-3.5 text-[#C084FC]" />
-                <span>Download cv</span>
+                <span>Download CV</span>
               </a>
 
               {/* 3. Contact Me */}
