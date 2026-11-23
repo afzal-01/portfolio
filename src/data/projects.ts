@@ -100,7 +100,7 @@ export const projects: Project[] = [
     technology: "SQL, MySQL",
     date: "June 2025",
     category: "SQL",
-    image: "/images/olympics-dashboard.png",
+    image: "/images/restaurant-dashboard.png",
     githubUrl: "https://github.com/afzal-01/restaurant-ordering-analysis",
     description: "Exploratory transactional analysis using SQL to identify top-selling menu items, peak ordering hours, customer ordering patterns, and revenue trends across multi-category orders.",
     features: [

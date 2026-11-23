@@ -13,7 +13,7 @@ export const Contact: React.FC = () => {
               Get In Touch
             </h3>
             <p className="text-xs sm:text-sm text-[#A5AEC5] max-w-xl">
-              Open to Data Analyst and Business Intelligence opportunities. Feel free to reach out directly via email.
+              Open to Associate Data Analyst and Business Intelligence opportunities. Feel free to reach out directly via email.
             </p>
           </div>
 

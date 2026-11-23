@@ -19,7 +19,10 @@ export const ProjectsPage: React.FC = () => {
     title: '',
   });
 
-  const categories = ['All', 'Power BI', 'SQL', 'Python'];
+  const categories = useMemo(
+    () => ['All', ...Array.from(new Set(projects.map((p) => p.category)))],
+    []
+  );
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {

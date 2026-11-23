@@ -11,8 +11,8 @@ export interface ExperienceItem {
 export const experiences: ExperienceItem[] = [
   {
     id: "genpact",
-    company: "genpact",
-    position: "Data Analyst",
+    company: "Genpact",
+    position: "Associate Data Analyst",
     location: "Genpact, Madurai",
     duration: "August 2025 – Present",
     badgeText: "Aug 2025 – Present",

@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface GraphicProps {
-  type: 'blinkit' | 'covid' | 'olympics';
+  type: 'blinkit' | 'covid' | 'restaurant';
 }
 
 export const ProjectDashboardPreviewGraphic: React.FC<GraphicProps> = ({ type }) => {
@@ -133,65 +133,87 @@ export const ProjectDashboardPreviewGraphic: React.FC<GraphicProps> = ({ type })
     );
   }
 
-  // Olympics
+  // Restaurant Order Analysis
   return (
     <div className="w-full h-44 bg-[#10152A] rounded-xl p-3 border border-[#8B5CF6]/20 flex flex-col justify-between overflow-hidden relative">
       <div className="flex items-center justify-between border-b border-[#8B5CF6]/15 pb-2">
         <span className="text-[11px] font-bold text-white tracking-wide">
-          Olympics Dataset EDA
+          Restaurant Order Analysis
         </span>
-        {/* Olympic Rings Indicator */}
-        <div className="flex items-center -space-x-1">
-          <div className="w-2.5 h-2.5 rounded-full border border-blue-400" />
-          <div className="w-2.5 h-2.5 rounded-full border border-amber-400" />
-          <div className="w-2.5 h-2.5 rounded-full border border-white" />
-          <div className="w-2.5 h-2.5 rounded-full border border-emerald-400" />
-          <div className="w-2.5 h-2.5 rounded-full border border-rose-400" />
+        <span className="text-[9px] font-mono text-[#38BDF8] bg-[#38BDF8]/15 px-1.5 py-0.5 rounded">
+          SQL Aggregations
+        </span>
+      </div>
+
+      {/* Mini KPI metrics */}
+      <div className="grid grid-cols-3 gap-1.5 my-1">
+        <div className="bg-[#171D35] p-1 rounded border border-[#8B5CF6]/10 text-center">
+          <span className="text-[7.5px] text-[#A5AEC5] block">Peak Hours</span>
+          <span className="text-[9.5px] font-mono font-bold text-amber-400">7 - 9:30 PM</span>
+        </div>
+        <div className="bg-[#171D35] p-1 rounded border border-[#8B5CF6]/10 text-center">
+          <span className="text-[7.5px] text-[#A5AEC5] block">AOV Boost</span>
+          <span className="text-[9.5px] font-mono font-bold text-emerald-400">+24.5%</span>
+        </div>
+        <div className="bg-[#171D35] p-1 rounded border border-[#8B5CF6]/10 text-center">
+          <span className="text-[7.5px] text-[#A5AEC5] block">Top Entrees</span>
+          <span className="text-[9.5px] font-mono font-bold text-[#C084FC]">52% Rev</span>
         </div>
       </div>
 
-      {/* Bar Chart & Medal Podiums */}
-      <div className="grid grid-cols-12 gap-2 items-end flex-1 pt-2">
-        <div className="col-span-7 flex items-end justify-between gap-1 h-18">
-          {[40, 55, 75, 60, 90, 80].map((h, i) => (
+      {/* Category Sales Contribution & Hourly Distribution */}
+      <div className="grid grid-cols-12 gap-2 items-center flex-1">
+        {/* Hourly Order Trend Bars */}
+        <div className="col-span-6 flex items-end justify-between gap-1 h-14 pt-1">
+          {[20, 35, 60, 45, 25, 50, 85, 95, 75, 40].map((h, i) => (
             <div key={i} className="flex-1 flex flex-col items-center h-full justify-end">
               <div
-                className="w-full bg-gradient-to-t from-[#6366F1] to-[#A855F7] rounded-t-sm"
+                className={`w-full rounded-t-sm ${
+                  i === 6 || i === 7
+                    ? 'bg-gradient-to-t from-amber-500 to-[#F59E0B]'
+                    : 'bg-gradient-to-t from-[#6366F1] to-[#8B5CF6]'
+                }`}
                 style={{ height: `${h}%` }}
               />
             </div>
           ))}
         </div>
 
-        {/* Medals Podium */}
-        <div className="col-span-5 flex items-center justify-around pb-1">
-          {/* Gold */}
-          <div className="flex flex-col items-center">
-            <span className="text-xs">🥇</span>
-            <div className="w-4 h-9 bg-amber-500/80 rounded-t text-[8px] flex items-center justify-center font-bold text-black font-mono">
-              1
+        {/* Category Contribution Progress */}
+        <div className="col-span-6 space-y-1.5 text-[8px] font-mono">
+          <div>
+            <div className="flex justify-between text-[#A5AEC5] mb-0.5">
+              <span>Entrees</span>
+              <span className="text-white font-bold">52%</span>
+            </div>
+            <div className="w-full bg-[#171D35] h-1.5 rounded-full overflow-hidden">
+              <div className="bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] h-full rounded-full" style={{ width: '52%' }} />
             </div>
           </div>
-          {/* Silver */}
-          <div className="flex flex-col items-center">
-            <span className="text-xs">🥈</span>
-            <div className="w-4 h-6 bg-slate-300/80 rounded-t text-[8px] flex items-center justify-center font-bold text-black font-mono">
-              2
+          <div>
+            <div className="flex justify-between text-[#A5AEC5] mb-0.5">
+              <span>Beverages</span>
+              <span className="text-white font-bold">25%</span>
+            </div>
+            <div className="w-full bg-[#171D35] h-1.5 rounded-full overflow-hidden">
+              <div className="bg-gradient-to-r from-[#38BDF8] to-[#0284C7] h-full rounded-full" style={{ width: '25%' }} />
             </div>
           </div>
-          {/* Bronze */}
-          <div className="flex flex-col items-center">
-            <span className="text-xs">🥉</span>
-            <div className="w-4 h-4 bg-amber-700/80 rounded-t text-[8px] flex items-center justify-center font-bold text-white font-mono">
-              3
+          <div>
+            <div className="flex justify-between text-[#A5AEC5] mb-0.5">
+              <span>Combos / Apps</span>
+              <span className="text-white font-bold">23%</span>
+            </div>
+            <div className="w-full bg-[#171D35] h-1.5 rounded-full overflow-hidden">
+              <div className="bg-gradient-to-r from-amber-400 to-amber-600 h-full rounded-full" style={{ width: '23%' }} />
             </div>
           </div>
         </div>
       </div>
 
       <div className="flex items-center justify-between text-[8px] text-[#A5AEC5] font-mono pt-1 border-t border-[#8B5CF6]/10">
-        <span>Pandas / NumPy / Matplotlib</span>
-        <span className="text-amber-400">70,000+ Rows</span>
+        <span>SQL / Group By / AOV</span>
+        <span className="text-[#38BDF8]">70,000+ Orders</span>
       </div>
     </div>
   );

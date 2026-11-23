@@ -30,7 +30,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
               {isGenpact ? (
                 <div className="px-3 py-1.5 rounded-lg bg-[#10152A] border border-[#8B5CF6]/30 flex items-center gap-2 font-bold text-white text-xs shadow-sm">
                   <GenpactLogo className="w-4 h-4 shrink-0" />
-                  <span className="tracking-wide font-extrabold text-white lowercase">genpact</span>
+                  <span className="tracking-wide font-extrabold text-white">Genpact</span>
                 </div>
               ) : (
                 <div className="px-3 py-1.5 rounded-lg bg-[#10152A] border border-[#8B5CF6]/30 flex items-center gap-2 font-bold text-white text-xs shadow-sm">

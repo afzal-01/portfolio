@@ -41,10 +41,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenVideo }
     }
   };
 
-  const getGraphicType = (): 'blinkit' | 'covid' | 'olympics' => {
+  const getGraphicType = (): 'blinkit' | 'covid' | 'restaurant' => {
     if (project.id.includes('blinkit')) return 'blinkit';
     if (project.id.includes('covid')) return 'covid';
-    return 'olympics';
+    return 'restaurant';
   };
 
   const handleCardClick = (e: React.MouseEvent) => {

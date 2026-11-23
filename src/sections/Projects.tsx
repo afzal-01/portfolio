@@ -36,8 +36,6 @@ export const Projects: React.FC = () => {
         <SectionHeading
           icon={Layers}
           title="Featured Projects"
-          actionText="View All Projects"
-          actionHref="/projects"
         />
 
         {/* 3 Projects Grid */}
